@@ -1,0 +1,8 @@
+<input type="text" #title (keypress)="loadMovies(title.value)"/>
+<div *ngIf="movies">
+  <div *ngFor="let movie of movies">
+    <h1>{{movie.Title}}</h1>
+    <p>{{movie.Year}}</p>
+    <img src="{{movie.Poster}}" />
+  </div>
+</div>
