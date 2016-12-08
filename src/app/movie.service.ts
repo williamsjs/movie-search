@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Rx';
-// Import RxJs required methods
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class MovieService {
@@ -13,6 +10,7 @@ export class MovieService {
   private moviesUrl = 'http://omdbapi.com?s=';
 
   getMovies(searchInput: string) : Observable<Object[]>{
+    console.log("request made");
     return this.http.get(this.moviesUrl + searchInput)
                    // ...and calling .json() on the response to return data
                     .map((res:Response) => res.json().Search)

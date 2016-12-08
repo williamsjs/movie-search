@@ -1,4 +1,4 @@
-<input type="text" #title (keyup)="loadMovies(title.value)"/>
+<input type="text" [formControl]="title"/>
 <div *ngIf="movies">
   <div *ngFor="let movie of movies">
     <h1>{{movie.Title}}</h1>

@@ -1,34 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-search-textbox',
   templateUrl: './search-textbox.component.html',
   styleUrls: ['./search-textbox.component.css'],
-  providers: [ MovieService]
+  providers: [MovieService]
 })
 export class SearchTextboxComponent implements OnInit {
 
-  public movies;
-  public title;
-
-  constructor(private movieService: MovieService) { }
+  private movies;
+  private title = new FormControl();
+  
+  constructor(private movieService: MovieService) {
+  this.title.valueChanges
+           .debounceTime(400)
+           .distinctUntilChanged()
+           .flatMap(title => this.movieService.getMovies(title))
+           .subscribe(movies => this.movies = movies);
+  }
 
   ngOnInit() {
     //this.loadMovies();
-  }
-
-  searchMovie(title: string) : void {
-    this.title = title;
-  }
-
-  loadMovies(title: string) {
-    this.movieService.getMovies(title)
-      .subscribe(
-        movies => this.movies = movies,
-        err => {
-          console.log(err);
-        });
   }
 
 }
