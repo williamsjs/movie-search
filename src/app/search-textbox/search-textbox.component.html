@@ -1,8 +1,2 @@
 <input type="text" [formControl]="title"/>
-<div *ngIf="movies">
-  <div *ngFor="let movie of movies">
-    <h1>{{movie.Title}}</h1>
-    <p>{{movie.Year}}</p>
-    <img src="{{movie.Poster}}" *ngIf="movie.Poster != 'N/A'"/>
-  </div>
-</div>
+<app-movie-list [movies]="movies"></app-movie-list>

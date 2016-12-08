@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SearchTextboxComponent } from './search-textbox/search-textbox.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchTextboxComponent
+    SearchTextboxComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
