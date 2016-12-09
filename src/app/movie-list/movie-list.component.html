@@ -1,5 +1,8 @@
-<div *ngFor="let movie of movies" class="col-md-4 col-sm-6 col-xs-12">
-  <h1>{{movie.Title}}</h1>
-  <p>{{movie.Year}}</p>
-  <img src="{{movie.Poster}}" *ngIf="movie.Poster != 'N/A'"/>
+<div *ngFor="let movie of movies">
+  <div *ngIf="movie.Poster != 'N/A'"
+       class="col-md-3 col-sm-6 col-xs-12 movie">
+    <img src="{{movie.Poster}}" class="poster"/>
+    <h1 class="movie-title">{{movie.Title}}</h1>
+    <p>{{movie.Year}}</p>
+  </div>
 </div>

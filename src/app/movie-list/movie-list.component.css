@@ -1,0 +1,22 @@
+.poster {
+  height: 175px;
+  width: 120px;
+}
+
+.movie-title {
+  margin-top: 15px;
+  font-size: 1.2vw;
+}
+
+.movie {
+  margin: 22px auto;
+  padding-top: 20px;
+  height: 285px;
+  background: lightgrey;
+}
+
+@media (max-width: 1120px) {
+  .movie-title {
+    font-size: 15px;
+  }
+}
