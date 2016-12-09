@@ -3,20 +3,23 @@
   width: 120px;
 }
 
-.movie-title {
+.card-title {
   margin-top: 15px;
   font-size: 1.2vw;
 }
 
-.movie {
-  margin: 22px auto;
-  padding-top: 20px;
-  height: 285px;
+.card-img-top {
+  width: 100%;
+  max-height: 290px;
+}
+
+.card {
   background: lightgrey;
+  min-height: 435px;
 }
 
 @media (max-width: 1120px) {
-  .movie-title {
+  .card-title {
     font-size: 15px;
   }
 }
