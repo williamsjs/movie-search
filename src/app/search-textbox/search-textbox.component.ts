@@ -19,11 +19,9 @@ export class SearchTextboxComponent implements OnInit {
              .debounceTime(400)
              .distinctUntilChanged()
              .flatMap(title => this.movieService.getMovies(title))
-             .subscribe(movies => this.movies = movies); // Search contains the array of movies from the json response
+             .subscribe(movies => this.movies = movies);
   }
 
-  ngOnInit() {
-    //this.loadMovies();
-  }
+  ngOnInit() {}
 
 }
