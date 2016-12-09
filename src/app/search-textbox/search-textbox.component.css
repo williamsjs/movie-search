@@ -1,0 +1,4 @@
+.loading {
+  height: 1000px;
+  background: url("../../assets/images/loading.gif") no-repeat fixed center;
+}

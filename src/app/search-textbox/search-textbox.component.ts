@@ -12,13 +12,13 @@ export class SearchTextboxComponent implements OnInit {
 
   private movies;
   private title = new FormControl();
-  
+
   constructor(private movieService: MovieService) {
-  this.title.valueChanges
-           .debounceTime(400)
-           .distinctUntilChanged()
-           .flatMap(title => this.movieService.getMovies(title))
-           .subscribe(movies => this.movies = movies);
+    this.title.valueChanges
+             .debounceTime(400)
+             .distinctUntilChanged()
+             .flatMap(title => this.movieService.getMovies(title))
+             .subscribe(movies => this.movies = movies);
   }
 
   ngOnInit() {

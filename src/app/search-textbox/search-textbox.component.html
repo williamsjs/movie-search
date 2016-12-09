@@ -1,2 +1,10 @@
-<input type="text" [formControl]="title"/>
-<app-movie-list [movies]="movies"></app-movie-list>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [formControl]="title" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" [class.loading]="!movies && title.value ">
+    <app-movie-list [movies]="movies"></app-movie-list>
+  </div>
+</div>
