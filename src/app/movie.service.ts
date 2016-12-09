@@ -9,7 +9,7 @@ export class MovieService {
   // private instance variable to hold base url
   private moviesUrl = 'http://omdbapi.com?s=';
 
-  getMovies(searchInput: string) : Observable<Object[]>{
+  getMovies(searchInput: string) : Observable<Object>{
     console.log("request made");
     return this.http.get(this.moviesUrl + searchInput)
                    // ...and calling .json() on the response to return data
