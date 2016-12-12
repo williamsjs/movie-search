@@ -10,7 +10,7 @@ export class MovieService {
   private moviesUrl = 'http://omdbapi.com?s=';
   private movieDetailsUrl = 'http://omdbapi.com?i=';
 
-  getMovies(searchInput: string) : Observable<Object>{
+  getMovies(searchInput: string) : Observable<Object[]>{
     console.log("request made");
     return this.http.get(this.moviesUrl + searchInput)
                     .map((res:Response) => res.json().Search)

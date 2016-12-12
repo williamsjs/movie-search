@@ -6,7 +6,7 @@
        <div class="card-block">
          <h4 class="card-title">{{movie.Title}}</h4>
          <p class="card-text">{{movie.Year}}</p>
-         <button class="btn btn-success">Details</button>
+         <button (click)="gotoDetail(movie.imdbID)" class="btn btn-success">Details</button>
        </div>
      </div>
   </div>
