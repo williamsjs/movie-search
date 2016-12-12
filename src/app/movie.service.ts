@@ -18,7 +18,7 @@ export class MovieService {
   }
 
   getMovieDetails(movieID: string) : Observable<Object> {
-    return this.http.get(this.movieDetailsUrl + movieID)
+    return this.http.get(this.movieDetailsUrl + movieID + '&tomatoes=true') // add rotten tomatoes param
                     .map((r: Response) => r.json())
                     .catch((error:any) => Observable.throw(error.json().error || 'error'));
   }
