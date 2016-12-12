@@ -10,6 +10,7 @@ import { SearchTextboxComponent } from './search-textbox/search-textbox.componen
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProgressBarDirective } from './progress-bar.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SearchTextboxComponent,
     MovieListComponent,
     MovieDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProgressBarDirective
   ],
   imports: [
     BrowserModule,
