@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-movie-detail',
   templateUrl: './movie-detail.component.html',
-  styleUrls: ['./movie-detail.component.css'],
+  styleUrls: ['./movie-detail.component.scss'],
   providers: [MovieService]
 })
 
