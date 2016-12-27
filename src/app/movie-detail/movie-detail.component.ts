@@ -17,7 +17,7 @@ export class MovieDetailComponent implements OnInit {
     private movieService: MovieService,
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.route.params
