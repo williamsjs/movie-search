@@ -1,6 +1,8 @@
 <div class="row searchbox">
   <div class="col-md-12">
-    <input type="text" [formControl]="title" placeholder="Enter Title" autofocus/>
+    <div class="input group">
+      <input type="text" class="form-control search-textbox" [formControl]="title" placeholder="Enter Title" autofocus/>
+    </div>
   </div>
 </div>
 <div class="row" [class.loading]="!movies && title.value ">

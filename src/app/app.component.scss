@@ -1,7 +1,11 @@
-* {
-  text-align: center;
-}
+.bg-image {
+  min-height: 100%;
+  min-width: 1024px;
 
-.title {
-  margin: 25px auto;
+  width: 100%;
+  height: auto;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 }

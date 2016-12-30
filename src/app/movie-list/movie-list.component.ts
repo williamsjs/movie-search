@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { PlatformLocation } from '@angular/common';
 
 import { MovieService } from '../movie.service';
 
@@ -15,13 +14,8 @@ export class MovieListComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private movieService: MovieService,
-    private location: PlatformLocation
-  ) {
-      location.onPopState(() => {
-        console.log('pressed back!');
-      });
-    }
+    private movieService: MovieService
+  ) {}
 
   ngOnInit() {}
 
