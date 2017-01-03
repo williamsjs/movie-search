@@ -20,6 +20,6 @@ export class MovieListComponent implements OnInit {
   ngOnInit() {}
 
   gotoDetail(selectedMovieID): void {
-    this.router.navigate(['./detail', selectedMovieID])
+    this.router.navigate(['./movies', selectedMovieID])
   }
 }

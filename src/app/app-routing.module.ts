@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieListComponent }      from './movie-list/movie-list.component';
 import { MovieDetailComponent }  from './movie-detail/movie-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MovieResolve } from './movie-detail/movie.resolve';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Dashboard', pathMatch: 'full' },
   { path: 'Dashboard', component: DashboardComponent},
-  { path: 'detail/:id', component: MovieDetailComponent },
-  { path: 'movies',     component: MovieListComponent }
+  { path: 'movies/:id',
+    component: MovieDetailComponent,
+    resolve: {
+      movie: MovieResolve
+    }
+  },
+  { path: 'movies', component: MovieListComponent }
 ];
 
 @NgModule({

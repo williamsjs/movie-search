@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, JsonpModule  } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,9 @@ import { SearchTextboxComponent } from './search-textbox/search-textbox.componen
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProgressBarDirective } from './progress-bar.directive';
+
+import { MovieService } from './movie.service';
+import { MovieResolve } from './movie-detail/movie.resolve';
 
 @NgModule({
   declarations: [
@@ -18,18 +20,19 @@ import { ProgressBarDirective } from './progress-bar.directive';
     SearchTextboxComponent,
     MovieListComponent,
     MovieDetailComponent,
-    DashboardComponent,
-    ProgressBarDirective
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    MovieService,
+    MovieResolve
+  ],
   bootstrap: [AppComponent]
 })
 
