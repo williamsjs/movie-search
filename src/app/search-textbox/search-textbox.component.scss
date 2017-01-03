@@ -3,10 +3,12 @@
   background: url("../../assets/images/loading.gif") no-repeat fixed center;
 }
 
-input {
-  text-align: center;
-}
-
 .searchbox {
   margin-bottom: 25px;
+}
+
+.search-textbox {
+  width: 10%;
+  margin: auto;
+  text-align: center;
 }

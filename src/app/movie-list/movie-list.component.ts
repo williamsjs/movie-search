@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class MovieListComponent implements OnInit {
   constructor(
     private router: Router,
     private movieService: MovieService
-  ) { }
+  ) {}
 
   ngOnInit() {}
 
