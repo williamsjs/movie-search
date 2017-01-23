@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+
+  .nav-item {
+      list-style-type: none;
+      background: teal;
+      margin: auto 5px;
+  }
+
+  .nav-item a {
+      color: white;
+  }
+}
