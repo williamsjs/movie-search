@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+}
+
 .poster {
   height: 175px;
   width: 120px;
@@ -15,8 +21,8 @@
 }
 
 .card {
-  background: lightgrey;
   min-height: 475px;
+  margin: 15px;
 }
 
 @media (max-width: 1120px) {
