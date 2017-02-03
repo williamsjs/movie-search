@@ -6,9 +6,9 @@
     <h1>{{movie.Title}}: {{movie.Year}}</h1>
     <div *ngIf="movie.tomatoMeter != 'N/A'">
       <progress class="progress progress-striped progress-success" [class.progress-danger]="movie.tomatoMeter < 50" value="{{movie.tomatoMeter}}" max="100"></progress>
-      <h1>{{movie.tomatoMeter}}%</h1>
+      <h1>{{ movie.tomatoMeter }}%</h1>
       <div class="consensus">
-        <p>{{movie.tomatoConsensus}}</p>
+        <p>{{ movie.tomatoConsensus }}</p>
       </div>
     </div>
   </div>
